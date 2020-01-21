@@ -2,7 +2,9 @@
 
 # BitChain, a Bitcoin Blockchain implementation in Python
 
-The library implements code for the following concepts:
+Status: under development
+
+This library implements the steps for reading and creating transaction in the Bitcoin Blockchain. 
 
 - Finite Fields
 - Elliptic Curves

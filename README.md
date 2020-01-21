@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/aroff/bitchain/branch/master/graph/badge.svg)](https://codecov.io/gh/aroff/bitchain)
+
 # BitChain, a Bitcoin Blockchain implementation in Python
 
 The library implements code for the following concepts:

@@ -28,7 +28,7 @@ class FieldElement:
         return True
 
     def __add__(self, other):
-        self.checkOrder(self, other)
+        self.checkOrder(other)
         num = (self.num + other.num) % self.order
         return self.__class__(num, self.order)
 

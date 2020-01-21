@@ -57,6 +57,6 @@ class FieldElement:
         return self.__class__(num, self.order)
 
     def __rmul__(self, coefficient):
-        num = (self.num * coefficient) % self.prime
-        return self.__class__(num=num, prime=self.prime)        
+        num = (self.num * coefficient) % self.order
+        return self.__class__(num=num, order=self.order)        
 

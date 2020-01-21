@@ -7,4 +7,4 @@ x = FieldElement(15, 223)
 y = FieldElement(86, 223)
 
 p = Point(x, y, a, b)
-#print(7 * p)
+print(7 * p)

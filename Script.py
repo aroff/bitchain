@@ -1,4 +1,11 @@
 from helper import read_varint, int_to_little_endian, encode_varint#,  #little_endian_to_int
+from op import (
+    op_equal,
+    op_hash160,
+    op_verify,
+    OP_CODE_FUNCTIONS,
+    OP_CODE_NAMES,
+)
 
 def p2pkh_script(h160):
     #'''Takes a hash160 and returns the p2pkh ScriptPubKey'''

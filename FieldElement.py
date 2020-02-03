@@ -45,7 +45,6 @@ class FieldElement:
     def __pow__(self, exponent):
         # num = (self.num ** exponent) % self.order -> this version works for positive number, but is slow
         # num = pow(self.num, exponent, self.order) -> this is faster
-
         n = exponent % (self.order - 1)
         num = pow(self.num, n, self.order)
         return self.__class__(num, self.order)

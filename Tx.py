@@ -36,6 +36,7 @@ class TxFetcher:
         cls.cache[tx_id].testnet = testnet
         return cls.cache[tx_id]
 
+# CTransaction of C++
 class Tx:
     def __init__(self, version, tx_ins, tx_outs, locktime, testnet = False):
         self.version = version
@@ -175,6 +176,7 @@ class Tx:
         return int.from_bytes(h256, 'big')        
 
 
+# this class is equivalent to the CTxIn in C++ 
 class TxIn:
     def __init__(self, prev_tx, prev_index, script_sig = None, sequence = 0xffffffff):
         self.prev_tx = prev_tx

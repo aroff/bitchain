@@ -2,7 +2,7 @@ import socket
 from unittest import TestCase
 import time
 
-import Network
+from Network import NetworkEnvelope, VersionMessage
 
 class SimpleNode:
 

@@ -5,12 +5,25 @@ from Signature import Signature
 # this class will house our secret
 class PrivateKey:
     def __init__(self, secret):
+        """
+        Parameters
+        ----------
+        secret : 
+            xxxxxx
+        """        
         self.secret = secret
         self.point = secret * G
 
     def sign(self, z):
+
+        """Sign the content
+        Parameters
+        ----------
+        z : 
+            xxxxxx
+        """              
         k = randint(0, N) # random number integer from 0 to N. >>>>>>>>>>>>>>>> TODO: for real-world applications, need to use better generator
-        r = (k * G).x.num; # is the x coordinate of kG
+        r = (k * G).x.num # is the x coordinate of kG
         k_inv = pow(k, N-2, N) # fermat's litthe theorem with n, which is a prime number
         s = (z + r * self.secret) * k_inv % N # s = (z + re) / k
         if s > N/2:
@@ -18,4 +31,10 @@ class PrivateKey:
         return Signature(r, s)
 
     def hex(self):
+        """Convert to hexadecimal
+        Parameters
+        ----------
+        z : 
+            xxxxxx
+        """              
         return '{:x}'.format(self.secret).zfill(64)
